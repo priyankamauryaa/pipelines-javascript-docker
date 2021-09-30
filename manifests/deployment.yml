@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: priyankamauryaapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: priyankamauryaapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: priyankamauryaapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: priyankamauryaapipelinesjavascriptdocker 
+          image: priyankacreg.azurecr.io/priyankamauryaapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
